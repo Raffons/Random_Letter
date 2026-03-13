@@ -40,6 +40,13 @@ namespace RandomNumber
         {
             parola += estrazioneCasuale;
             lblElenco.Content = parola;
+
+            if (parola.Length > 5)
+            {
+                lstParoleFinite.DataContext = parola;
+            }
         }
+
+
     }
 }

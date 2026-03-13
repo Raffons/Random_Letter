@@ -15,22 +15,21 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <!-- LABEL CHE MOSTRA LE LETTERE CHE SONO STATE ESTRATTE -->
-        <Label x:Name="lblElenco" Grid.Row="0" Grid.ColumnSpan="2" 
-               Background="LightGray" FontSize="36" 
+        <Label x:Name="lblElenco" Grid.Row="0" Grid.Column="0" 
+               Background="LightGray" FontSize="36" Margin="10"
                HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
 
-        <!-- LABEL CHE MOSTRA LE LETTERE CHE GIRANO IN CONTINUAZIONE-->
         <Label x:Name="lblLetteraEstratta" Grid.Row="1" Grid.Column="0" 
                Background="White" FontSize="150" FontWeight="Bold" Margin="10"
                HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
 
-        <!-- BOTTONE DI AVVIO DELLA "ROTAZIONE" CASUALE DELLE LETTERE-->
-       <Button x:Name="btnStart" Grid.Row="2" Grid.Column="0" 
-               Content="START" Click="btnStart_Click" 
-               FontSize="26" FontWeight="Bold" Margin="10" />
-        
-        <!-- BOTTONE DI ESTRAZIONE DI UNA LETTERA -->
+        <ListBox x:Name="lstParoleFinite" Grid.Row="0" Grid.Column="1" Grid.RowSpan="2"
+                 FontSize="24" Margin="10" />
+
+        <Button x:Name="btnStart" Grid.Row="2" Grid.Column="0" 
+                Content="START" Click="btnStart_Click" 
+                FontSize="26" FontWeight="Bold" Margin="10" />
+
         <Button x:Name="btnEstrai" Grid.Row="2" Grid.Column="1"   
                 Content="ESTRAI LETTERA" Click="btnEstrazione_Click" 
                 FontSize="26" FontWeight="Bold" Margin="10" />
