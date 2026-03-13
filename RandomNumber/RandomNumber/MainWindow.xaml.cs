@@ -25,17 +25,21 @@ namespace RandomNumber
         private string[] Alfabeto = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
         string parola;
-        private async void btnEstrazione_Click(object sender, RoutedEventArgs e)
+        string estrazioneCasuale;
+        private async void btnStart_Click(object sender, RoutedEventArgs e)
         {
-        while (true)
+            while (true)
             {
-                string estrazioneCasuale = Alfabeto[rnd.Next(0, 25)];
-                parola += estrazioneCasuale;
-                lblLettera.Content = estrazioneCasuale;
+                estrazioneCasuale = Alfabeto[rnd.Next(0, 25)];
+                lblLetteraEstratta.Content = estrazioneCasuale;
 
-                string label = estrazioneCasuale;
-                await Task.Delay(400);
-            }   
+                await Task.Delay(100);
+            }
+        }
+        private void btnEstrazione_Click(object sender, RoutedEventArgs e)
+        {
+            parola += estrazioneCasuale;
+            lblElenco.Content = parola;
         }
     }
 }
